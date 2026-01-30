@@ -118,6 +118,7 @@ export const CountrySelector: React.FC<CountrySelectorProps> = React.memo(
           })}
           style={styleProps.buttonContentWrapperStyle}
         >
+        <span className='country-code'>{selectedCountry?.toUpperCase()}</span>
           <FlagImage
             iso2={selectedCountry}
             src={flags?.find((f) => f.iso2 === selectedCountry)?.src}
